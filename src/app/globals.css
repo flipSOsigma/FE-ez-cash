@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 
 :root {
   --background: #ffffff;
@@ -17,5 +19,20 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins;
+}
+
+@layer base {
+  .container {  
+    @apply sm:max-w-sm w-full bg-white min-h-screen;
+  }
+  .brdr {
+    @apply border-2 border-black;
+  }
+  hr {
+    @apply border-t-2 border-black;
+  }
+  input, button, textarea, select {
+    @apply focus:ring-0 focus:outline-none
+  }
 }
